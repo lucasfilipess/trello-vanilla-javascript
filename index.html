@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Kanban</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Quadro Kanban</a>
+
+        </div>
+    </nav>
+    <div class="container d-flex align-items-center p-2 w-100">
+        <form class="d-flex align-items-center justify-content-between w-100">
+            <div class="input-group" style="max-width: 300px;">
+                <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </span>
+                <input type="text" class="form-control" placeholder="Pesquisar" aria-label="Pesquisar">
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                    <input type="date" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+                <ul class="nav align-items-center w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Hoje</a>
+                    </li>
+                    |
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Últimos 30 dias</a>
+                    </li>
+                    |
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">7 dias</a>
+                    </li>
+                    |
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">3 dias</a>
+                    </li>
+                    |
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">2 dias</a>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <main class="container mt-4">
+        <div id="container"></div>
+        <div id="container-main"></div>
+        <div id="card-edit">
+            <div id="card-edit-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                </svg>
+            </div>
+            <form>
+                <h5>Deseja deletar o card?</h5>
+                <div id="card-edit-inputs" class="mb-4" >
+                    <div>
+                        <input type="text" class="form-control w-100" id="card-edit-title" disabled>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end w-100 gap-3" >
+                    <button id="card-edit-submit" type="button" class="btn btn-success">Cancelar</button>
+                    <button id="card-edit-delete" type="button" class="btn btn-danger">Deletar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <script type="text/javascript" src="js/card-delete.js"></script>
+    <script type="text/javascript" src="js/card-edit.js"></script>
+    <script type="text/javascript" src="js/add-card.js"></script>
+    <script type="text/javascript" src="js/list-title-form.js"></script>
+    <script type="text/javascript" src="js/card-title-form.js"></script>
+    <script type="text/javascript" src="js/card.js"></script>
+    <script type="text/javascript" src="js/list.js"></script>
+    <script type="text/javascript" src="js/add-list.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
